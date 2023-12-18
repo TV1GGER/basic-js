@@ -12,6 +12,13 @@ const { NotImplementedError } = require('../extensions/index.js');
  * 
  */
 function getSeason(date) {
+  // date = class Date {
+  //   constructor( year, month, data ) {
+  //     this.year = year;
+  //     this.month = month;
+  //     this.data = data;
+  //    }
+  // }
   let string = date.toISOString();
 let arr = [];
 let num = 0;
@@ -30,9 +37,9 @@ if((date !== null) && (date)){
   if((str === '09') || (str === '10') || (str === '11')){
     return 'autumn';
   }
-}else{return 'Invalid date!';}
+}else{throw new Error('Invalid date!');}
 if(date === 'undefined'){
-  return 'Unable to determine the time of year!';
+  throw new Error('Unable to determine the time of year!');
 }
 
 
