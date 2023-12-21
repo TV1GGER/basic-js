@@ -19,6 +19,11 @@ function getSeason(date) {
   //     this.data = data;
   //    }
   // }
+
+
+///////////////////////////////
+
+
   let string = date.toISOString();
 let arr = [];
 let num = 0;
@@ -41,6 +46,9 @@ if((date !== null) && (date)){
 if(date === 'undefined'){
   throw new Error('Unable to determine the time of year!');
 }
+
+// throw new NotImplementedError('Not implemented');
+//   // remove line with error and write your code here
 
 
 }
